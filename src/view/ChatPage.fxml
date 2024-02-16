@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="413.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.client.ChatRoom">
+   <children>
+      <AnchorPane prefHeight="44.0" prefWidth="413.0" style="-fx-background-color: #2D9596;">
+         <children>
+            <Label fx:id="userNametxt" layoutX="57.0" layoutY="3.0" prefHeight="38.0" prefWidth="198.0" text="User Name" textFill="white">
+               <font>
+                  <Font name="System Bold" size="18.0"/>
+               </font>
+            </Label>
+            <ImageView fitHeight="22.0" fitWidth="35.0" layoutX="299.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-call-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="22.0" fitWidth="35.0" layoutX="351.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-video-call-50%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="45.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-user-48.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane layoutY="465.0" prefHeight="95.0" prefWidth="413.0" style="-fx-background-color: #9AD0C2;">
+         <children>
+            <TextField fx:id="msgField" layoutX="14.0" layoutY="48.0" prefHeight="38.0" prefWidth="329.0" promptText="Write messages here...." style="-fx-background-color: #F1FADA;" styleClass="msgBox" stylesheets="@../Css/style.css">
+               <font>
+                  <Font name="Arial" size="19.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="30.0" fitWidth="49.0" layoutX="303.0" layoutY="52.0" onMouseClicked="#emogiOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/normal.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="emogiPane" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="329.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="49.0" layoutX="14.0" onMouseClicked="#emoji1OnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/happy.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="49.0" layoutX="51.0" onMouseClicked="#emoji2OnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/love.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="49.0" layoutX="89.0" layoutY="1.0" onMouseClicked="#emoji3OnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/heart.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="49.0" layoutX="128.0" layoutY="-1.0" onMouseClicked="#emoji4OnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/wow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="49.0" layoutX="165.0" layoutY="-1.0" onMouseClicked="#emoji5OnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/laughing.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="49.0" layoutX="203.0" onMouseClicked="#emoji6OnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/sad.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="49.0" layoutX="244.0" layoutY="-1.0" onMouseClicked="#emoji7OnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/worry.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="49.0" layoutX="285.0" onMouseClicked="#emoji8OnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/angry.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="360.0" layoutY="14.0" onMouseClicked="#imageOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/camera-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="356.0" layoutY="48.0" onMouseClicked="#sendOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-sent.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="44.0" prefHeight="416.0" prefWidth="413.0">
+         <children>
+            <JFXTextArea fx:id="txtChatRoom" prefHeight="427.0" prefWidth="413.0" style="-fx-background-color: white;" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
